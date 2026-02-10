@@ -287,8 +287,8 @@ export const ABOUT_ME = {
     ],
 
     email: "sumitpalariya30@gmail.com",
-    phone: "45454545454",
-    website: "knnifio.com",
+    phone: "8218757359",
+    website: "github.com/Sumit-w41",
 }
 
 
@@ -297,29 +297,29 @@ export const PROJECTS = [
     {
         id: 1,
         title: "Iterative DNS resolver  | Javascript , Python",
-        image : Project_IMG_1,
+        image: Project_IMG_1,
         url: "https://dns-resolver-0m17.onrender.com",
         tags: ["React", "Flask API"],
     },
     {
         id: 2,
-        title: "Full Stack Notes App using Mern | MongoDB, Express, React JS, Node JS",
-        image : Project_IMG_1,
+        title: "Full Stack Notes App using Mern | MongoDB, Express",
+        image: Project_IMG_1,
         url: "https://github.com/Sumit-w41/notes-app",
         tags: ["React", "Express.js", "MongoDB", "Node.js"],
     },
 
     {
         id: 3,
-        title: "Full Stack Notes App using Mern | MongoDB, Express, React JS, Node JS",
-        image : Project_IMG_1,
+        title: "Full Stack Notes App using Mern | MongoDB, Express",
+        image: Project_IMG_1,
         url: "https://github.com/Sumit-w41/project-3",
         tags: ["React", "Express.js", "MongoDB", "Node.js"],
     },
     {
         id: 4,
-        title: "Full Stack Notes App using Mern | MongoDB, Express, React JS, Node JS",
-        image : Project_IMG_1,
+        title: "Full Stack Notes App using Mern | MongoDB, Express",
+        image: Project_IMG_1,
         url: "https://github.com/Sumit-w41/project-4",
         tags: ["React", "Express.js", "MongoDB", "Node.js"],
     },
