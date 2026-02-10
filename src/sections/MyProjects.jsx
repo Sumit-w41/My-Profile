@@ -12,19 +12,19 @@ const MyProjects = () => {
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
 
-    const updateScrollButtons = useCallback(()=>{
-        if(!emblaApi) return;
+    const updateScrollButtons = useCallback(() => {
+        if (!emblaApi) return;
         setCanScrollPrev(emblaApi.canScrollPrev());
         setCanScrollNext(emblaApi.canScrollNext());
-    },[emblaApi])
+    }, [emblaApi])
 
 
-    useEffect(()=>{
-        if(!emblaApi) return;
-        emblaApi.on("select",updateScrollButtons);
+    useEffect(() => {
+        if (!emblaApi) return;
+        emblaApi.on("select", updateScrollButtons);
         updateScrollButtons();
 
-    },[emblaApi,updateScrollButtons]);
+    }, [emblaApi, updateScrollButtons]);
 
 
 
@@ -39,28 +39,29 @@ const MyProjects = () => {
                 <div className='relative'>
                     <div className='overflow-hidden' ref={emblaRef}>
                         <div className='flex pt-14 pb-8'>
-                            {PROJECTS.map((project)=>(
+                            {PROJECTS.map((project) => (
                                 <div key={project.id}
-                                className='min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]'>
-                                        <ProjectCard
+                                    className='min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]'>
+                                    <ProjectCard
                                         key={project.id}
-                                        imgUrl= {project.image}
-                                        title = {project.title}
-                                        tags = {project.tags}
-                                        />
+                                        imgUrl={project.image}
+                                        title={project.title}
+                                        tags={project.tags}
+                                        url={project.url}
+                                    />
 
                                 </div>
                             ))}
                         </div>
 
                     </div>
-                    <button className={`absolute top-1/2 transform -translate-y-1/2 bg-red-300 text-white p-2 rounded-full shadow -left-5 ${!canScrollPrev ? "opacity-50 cursor-not-allowed":""} `} onClick={()=> emblaApi.scrollPrev()} disabled={!canScrollPrev}>
-                        <IoIosArrowForward className='rotate-180'/>
+                    <button className={`absolute top-1/2 transform -translate-y-1/2 bg-red-300 text-white p-2 rounded-full shadow -left-5 ${!canScrollPrev ? "opacity-50 cursor-not-allowed" : ""} `} onClick={() => emblaApi.scrollPrev()} disabled={!canScrollPrev}>
+                        <IoIosArrowForward className='rotate-180' />
                     </button>
 
 
-                    <button className={`absolute top-1/2 transform -translate-y-1/2 bg-red-300 text-white p-2 rounded-full shadow -right-5 ${!canScrollNext ? "opacity-50 cursor-not-allowed":""} `} onClick={()=> emblaApi.scrollNext()} disabled={!canScrollNext}>
-                        <IoIosArrowForward className=''/>
+                    <button className={`absolute top-1/2 transform -translate-y-1/2 bg-red-300 text-white p-2 rounded-full shadow -right-5 ${!canScrollNext ? "opacity-50 cursor-not-allowed" : ""} `} onClick={() => emblaApi.scrollNext()} disabled={!canScrollNext}>
+                        <IoIosArrowForward className='' />
                     </button>
 
                 </div>

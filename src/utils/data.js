@@ -6,7 +6,7 @@ import { VscVscode, VscCommentUnresolved, VscTerminalPowershell } from "react-ic
 
 import { FaGitAlt, FaTwitter, FaDribbble, FaXTwitter } from "react-icons/fa6";
 
-import dnsresolver from '../assets/images/dnsresolver.jpg'
+// import dnsresolver from '../assets/images/dnsresolver.jpg'
 
 import { MdGroups3 } from "react-icons/md";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -23,7 +23,7 @@ import { SiAnaconda } from "react-icons/si";
 
 
 
-// import Project_IMG_1 from '';
+import Project_IMG_1 from '../assets/images/dnsresolver.jpg';
 // import Project_IMG_2 from '';
 // import Project_IMG_3 from '';
 // import Project_IMG_4 from '';
@@ -297,27 +297,31 @@ export const PROJECTS = [
     {
         id: 1,
         title: "Iterative DNS resolver  | Javascript , Python",
-        image : dnsresolver,
-        tags: ["React", " Flask API"],
+        image : Project_IMG_1,
+        url: "https://dns-resolver-0m17.onrender.com",
+        tags: ["React", "Flask API"],
     },
     {
         id: 2,
         title: "Full Stack Notes App using Mern | MongoDB, Express, React JS, Node JS",
-        // image : Project_IMG_1,
-        tags: ["React", "Express.js", "MongoDB", Node.js],
+        image : Project_IMG_1,
+        url: "https://github.com/Sumit-w41/notes-app",
+        tags: ["React", "Express.js", "MongoDB", "Node.js"],
     },
 
     {
         id: 3,
         title: "Full Stack Notes App using Mern | MongoDB, Express, React JS, Node JS",
-        // image : Project_IMG_1,
-        tags: ["React", "Express.js", "MongoDB", Node.js],
+        image : Project_IMG_1,
+        url: "https://github.com/Sumit-w41/project-3",
+        tags: ["React", "Express.js", "MongoDB", "Node.js"],
     },
     {
         id: 4,
         title: "Full Stack Notes App using Mern | MongoDB, Express, React JS, Node JS",
-        // image : Project_IMG_1,
-        tags: ["React", "Express.js", "MongoDB", Node.js],
+        image : Project_IMG_1,
+        url: "https://github.com/Sumit-w41/project-4",
+        tags: ["React", "Express.js", "MongoDB", "Node.js"],
     },
 ]
 

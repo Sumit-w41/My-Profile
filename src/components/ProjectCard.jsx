@@ -1,22 +1,32 @@
 import React from 'react'
 
-const ProjectCard = ({imgUrl,title,tags}) => {
-  return (
-    <div className='h-full bg-white rounded-xl overflow-hidden shadow-md mx-2'>
-        <img src={imgUrl} alt={title} className='w-full h-72 md:h-80 object-cover' />
-        <div className='px-4 py-5'>
-            <h3 className='font-semibold text-base line-clamp-2 overflow-hidden text-ellipsis'>{title}</h3>
+const ProjectCard = ({ imgUrl, title, tags, url }) => {
+    const Card = (
+        <div className='h-full bg-white rounded-xl overflow-hidden shadow-md mx-2 cursor-pointer hover:shadow-lg transition-shadow duration-150'>
+            <img src={imgUrl} alt={title} className='w-full h-72 md:h-80 object-cover' />
+            <div className='px-4 py-5'>
+                <h3 className='font-semibold text-base line-clamp-2 overflow-hidden text-ellipsis'>{title}</h3>
 
-            <div className='flex flex-wrap gap-2 mt-2'>
-                {tags.map((tag,index)=>(
-                    <span key={index} className='text-xs bg-orange-100 px-3 py-1 rounded'>
-{tag}
-                    </span>
-                ))}
+                <div className='flex flex-wrap gap-2 mt-2'>
+                    {tags.map((tag, index) => (
+                        <span key={index} className='text-xs bg-orange-100 px-3 py-1 rounded'>
+                            {tag}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
+
+    if (url) {
+        return (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="block">
+                {Card}
+            </a>
+        )
+    }
+
+    return Card
 }
 
 export default ProjectCard
